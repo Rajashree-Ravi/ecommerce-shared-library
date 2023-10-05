@@ -22,22 +22,22 @@ public class OrderDto {
 	@ApiModelProperty(notes = "Unique identifier of the Order.", example = "1")
     private Long id;
 
-	@ApiModelProperty(notes = "Order Date.", example = "2023-10-05")
+	@ApiModelProperty(notes = "Order Date.", example = "2023-10-05", required = true)
     @NotNull
     private LocalDate orderedDate;
 
-	@ApiModelProperty(notes = "Status of the Order.", example = "DELIVERED")
+	@ApiModelProperty(notes = "Status of the Order.", example = "DELIVERED", required = true)
     private OrderStatus status;
 
-	@ApiModelProperty(notes = "Total amount of the order.", example = "450.00")
+	@ApiModelProperty(notes = "Total amount of the order.", example = "450.00", required = true)
     @NotNull
     private BigDecimal total;
 
-	@ApiModelProperty(notes = "Items in the order.")
+	@ApiModelProperty(notes = "Items in the order.", required = true)
 	@NotEmpty
     private List<ItemDto> items;
 
-	@ApiModelProperty(notes = "Unique identifier of the Customer.", example = "1")
+	@ApiModelProperty(notes = "Unique identifier of the Customer.", example = "1", required = true)
     @NotNull
     private Long userId;
 }

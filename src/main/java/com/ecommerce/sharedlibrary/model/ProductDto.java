@@ -20,7 +20,7 @@ public class ProductDto {
 	@ApiModelProperty(notes = "Unique identifier of the Product.", example = "1")
 	private Long id;
 
-	@ApiModelProperty(notes = "Product Code.", example = "21455")
+	@ApiModelProperty(notes = "Product Code.", example = "21455", required = true)
 	@NotBlank
 	private String productCode;
 

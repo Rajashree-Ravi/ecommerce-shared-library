@@ -22,15 +22,15 @@ public class ItemDto {
 	@JsonIgnore
 	private Long id;
 
-	@ApiModelProperty(notes = "Quantity of the products in Item.", example = "2")
+	@ApiModelProperty(notes = "Quantity of the products in Item.", example = "2", required = true)
 	@NotNull
 	private int quantity;
 
-	@ApiModelProperty(notes = "Item Total.", example = "200.00")
+	@ApiModelProperty(notes = "Item Total.", example = "200.00", required = true)
 	@NotNull
 	private BigDecimal subTotal;
 
-	@ApiModelProperty(notes = "Product in Item.", example = "5")
+	@ApiModelProperty(notes = "Product in Item.", example = "5", required = true)
 	@NotNull
 	private Long productId;
 }
