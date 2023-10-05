@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -28,7 +27,6 @@ public class OrderDto {
     private LocalDate orderedDate;
 
 	@ApiModelProperty(notes = "Status of the Order.", example = "DELIVERED")
-    @NotBlank
     private OrderStatus status;
 
 	@ApiModelProperty(notes = "Total amount of the order.", example = "450.00")
