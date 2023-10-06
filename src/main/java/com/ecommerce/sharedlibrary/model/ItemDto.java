@@ -4,8 +4,6 @@ import java.math.BigDecimal;
 
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -19,7 +17,6 @@ import lombok.NoArgsConstructor;
 public class ItemDto {
 
 	@ApiModelProperty(notes = "Unique identifier of the Item.", example = "1")
-	@JsonIgnore
 	private Long id;
 
 	@ApiModelProperty(notes = "Quantity of the products in Item.", example = "2", required = true)
